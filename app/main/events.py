@@ -1,7 +1,7 @@
 from flask import session
 from flask_socketio import emit, join_room, leave_room
 from .. import socketio
-
+from .ntfy import ntfy
 
 @socketio.on('joined', namespace='/chat')
 def joined(message):
@@ -17,6 +17,7 @@ def text(message):
     """Sent by a client when the user entered a new message.
     The message is sent to all people in the room."""
     room = session.get('room')
+    ntfy(message=message['msg'])
     emit('message', {'msg': session.get('name') + ':' + message['msg']}, room=room)
 
 

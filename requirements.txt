@@ -1,6 +1,9 @@
 async-timeout
 bidict
+certifi
+charset-normalizer
 click
+colorama
 Deprecated
 dnspython
 eventlet
@@ -8,6 +11,7 @@ Flask
 Flask-SocketIO
 Flask-WTF
 greenlet
+idna
 itsdangerous
 Jinja2
 MarkupSafe
@@ -15,8 +19,10 @@ packaging
 pyparsing
 python-engineio
 python-socketio
+requests
 six
-typing_extensions
+typing-extensions
+urllib3
 Werkzeug
 wrapt
 WTForms
